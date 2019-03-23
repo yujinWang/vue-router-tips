@@ -8,8 +8,8 @@ import Vuex from 'vuex'
 Vue.use(ElementUI, Vuex)
 Vue.config.productionTip = false
 
-router.beforeEach((to, from, next) => {
-	console.log(to.meta.path == "/portal/aaa/aaa1");
+router.beforeEach((to, from, next) => { //全局前置导航守卫，路由跳转登录验证，例如验证未通过跳转至登录页面
+	//console.log(to.meta.path == "/portal/aaa/aaa1");
 	next();
 	//const token = store.getters.userInfo
 	// if (to.matched.some(record => record.meta.requireAuth)) {

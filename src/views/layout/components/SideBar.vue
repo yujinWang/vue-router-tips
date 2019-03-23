@@ -1,6 +1,6 @@
 <template>
 	<div class="sidebar">
-		<router-link v-for="(item,index) in toPath" :key="index" :to="item.path">{{item.name}}</router-link>
+		<router-link v-for="(item,index) in $route.meta" :key="index" :to="item.path">{{item.name}}</router-link>
 	</div>
 </template>
 <script>
@@ -17,14 +17,9 @@
 		},
 		methods: {
 			test(){
-				//console.log(this.$route);
-				if(this.$route.name == "aaa"){
-					this.toPath = this.test2()["aaa"];
-				}else if(this.$route.name == "bbb"){
-
-				}else if(this.$route.name == "ccc"){
-					
-				}
+				this.$route.meta.forEach(item => {
+					this.toPath = item;
+				});
 			}
 		},
 		watch: {

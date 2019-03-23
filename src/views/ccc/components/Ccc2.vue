@@ -1,12 +1,10 @@
 <template>
-	<div class="aaa">
-		<router-view></router-view>
+	<div class="ccc2">
+		ccc2内容了
 	</div>
 </template>
 <script>
-	import routerList from "@/mixins/routeList.js"
 	export default {
-		mixins: [routerList],
 		data() {
 			return {
 
