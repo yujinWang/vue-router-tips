@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<div class="app">
 		<nav-bar />
 		<div class="main">
 			<side-bar />
@@ -21,7 +21,11 @@
 	}
 </script>
 <style scoped>
+	.app {
+		height: 100%;
+	}
 .main {
 	display: flex;
+	height: calc(100% - 60px);
 }
 </style>

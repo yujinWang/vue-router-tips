@@ -30,7 +30,15 @@
 <style scoped>
 .sidebar {
 	width: 200px;
-	height: 600px;
-	background: greenyellow;
+	height: 100%;
+	background: #311d1d;
+}
+.sidebar a {
+	height: 30px;
+	line-height: 40px;
+	font-size: 20px;
+	color: #FFFFFF;
+	display: block;
+	text-decoration: none;
 }
 </style>
