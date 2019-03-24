@@ -1,5 +1,5 @@
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
-const zh = {
+const cn = {
 	login: {
 		'username': '用户名',
 		'password': '密码',
@@ -7,4 +7,4 @@ const zh = {
 	},
 	...zhLocale
 }
-export default zh;
+export default cn;

@@ -3,7 +3,7 @@ const en = {
 	login: {
 		'username': 'username',
 		'password': 'password',
-		'signin': 'signin88888',
+		'signin': 'signin',
 	},
 
 	...enLocale

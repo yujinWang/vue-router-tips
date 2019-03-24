@@ -20,8 +20,8 @@
 
 <template>
 	<div>
-		aaa22222222222222
-		<span>{{$t('login.signin')}}</span>
+		<p>aaa22222222222222</p>	
+		<h1>{{$t('login.username')}}</h1>
 		<el-select v-model="selectValue" @change="langChange" placeholder="请选择">
 			<el-option v-for="item in options" :key="item.value" :label="item.label" :value="item.value">
 			</el-option>
