@@ -1,9 +1,10 @@
 import zhLocale from 'element-ui/lib/locale/lang/zh-CN'
 const cn = {
-	login: {
-		'username': '用户名',
-		'password': '密码',
-		'signin': '登录',
+	common: {
+		'netWork': '网络数据',
+		'application': '项目应用',
+		'setting': '设置',
+		'language': '中文'
 	},
 	...zhLocale
 }

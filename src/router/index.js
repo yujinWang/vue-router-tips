@@ -1,7 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 
-// import Layout from '@/views/layout/Layout'
+// import Layout from '@/views/layout/Layout' //前置加载-初次一次性加载所有的模块
 // import Aaa from '@/views/aaa/Aaa'
 // import Bbb from '@/views/bbb/Bbb'
 // import Ccc from '@/views/ccc/Ccc'
@@ -12,7 +12,7 @@ import Router from 'vue-router'
 // import Bbb2 from '@/views/bbb/components/Bbb2'
 // import Ccc2 from '@/views/ccc/components/Ccc2'
 
-const Layout = () => import('@/views/layout/Layout');
+const Layout = () => import('@/views/layout/Layout'); //后置加载-初次加载页面会快一点
 const Aaa = () => import('@/views/aaa/Aaa');
 const Bbb = () => import('@/views/bbb/Bbb');
 const Ccc = () => import('@/views/ccc/Ccc');
@@ -38,46 +38,19 @@ export default new Router({
 					path: 'aaa',
 					name: 'aaa',
 					component: Aaa,
-					meta: [
-						{
-							name: "aaa1",
-							path: "/portal/aaa/aaa1"
-						},
-						{
-							name: "aaa2",
-							path: "/portal/aaa/aaa2"
-						}
-					],
+					meta: {root: "aaa"},
 					children: [
 						{
 							path: 'aaa1',
 							name: 'aaa1',
 							component: Aaa1,
-							meta: [
-								{
-									name: "aaa1",
-									path: "/portal/aaa/aaa1"
-								},
-								{
-									name: "aaa2",
-									path: "/portal/aaa/aaa2"
-								}
-							]
+							meta: { root: "aaa" }
 						},
 						{
 							path: 'aaa2',
 							name: 'aaa2',
 							component: Aaa2,
-							meta: [
-								{
-									name: "aaa1",
-									path: "/portal/aaa/aaa1"
-								},
-								{
-									name: "aaa2",
-									path: "/portal/aaa/aaa2"
-								}
-							]
+							meta: { root: "aaa" }
 						}
 					]
 				},
@@ -85,46 +58,19 @@ export default new Router({
 					path: 'bbb',
 					name: 'bbb',
 					component: Bbb,
-				meta: [
-					{
-						name: "bbb1",
-						path: "/portal/bbb/bbb1"
-					},
-					{
-						name: "bbb2",
-						path: "/portal/bbb/bbb2"
-					}
-				],
+					meta: { root: "bbb" },
 					children: [
 						{
 							path: 'bbb1',
 							name: 'bbb1',
 							component: Bbb1,
-						meta: [
-							{
-								name: "bbb1",
-								path: "/portal/bbb/bbb1"
-							},
-							{
-								name: "bbb2",
-								path: "/portal/bbb/bbb2"
-							}
-						]
+							meta: { root: "bbb" }
 						},
 						{
 							path: 'bbb2',
 							name: 'bbb2',
 							component: Bbb2,
-							meta: [
-								{
-									name: "bbb1",
-									path: "/portal/bbb/bbb1"
-								},
-								{
-									name: "bbb2",
-									path: "/portal/bbb/bbb2"
-								}
-							]
+							meta: { root: "bbb" }
 						}
 					]
 				},
@@ -132,46 +78,19 @@ export default new Router({
 					path: 'ccc',
 					name: 'ccc',
 					component: Ccc,
-					meta: [
-						{
-							name: "ccc1",
-							path: "/portal/ccc/ccc1"
-						},
-						{
-							name: "ccc2",
-							path: "/portal/ccc/ccc2"
-						}
-					],
+					meta: { root: "ccc" },
 					children: [
 						{
 							path: 'ccc1',
 							name: 'ccc1',
 							component: Ccc1,
-						meta: [
-							{
-								name: "ccc1",
-								path: "/portal/ccc/ccc1"
-							},
-							{
-								name: "ccc2",
-								path: "/portal/ccc/ccc2"
-							}
-						],
+							meta: { root: "ccc" },
 						},
 						{
 							path: 'ccc2',
 							name: 'ccc2',
 							component: Ccc2,
-							meta: [
-								{
-									name: "ccc1",
-									path: "/portal/ccc/ccc1"
-								},
-								{
-									name: "ccc2",
-									path: "/portal/ccc/ccc2"
-								}
-							],
+							meta: { root: "ccc" }
 						}
 					]
 				}

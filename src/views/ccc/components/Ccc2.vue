@@ -1,6 +1,6 @@
 <template>
 	<div class="ccc2">
-		ccc2内容了
+		项目Ccc2
 	</div>
 </template>
 <script>

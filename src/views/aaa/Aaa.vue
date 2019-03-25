@@ -4,9 +4,7 @@
 	</div>
 </template>
 <script>
-	import routerList from "@/mixins/routeList.js"
 	export default {
-		mixins: [routerList],
 		data() {
 			return {
 

@@ -1,6 +1,6 @@
 <template>
 	<div class="bbb2">
-		bbb2内容
+		项目Bbb2
 	</div>
 </template>
 <script>
