@@ -2,7 +2,7 @@
 	<div class="sidebar">
 		<el-col :span="24">
 			<el-menu 
-			 default-active="2" 
+			 :default-active="activeIndex" 
 			 :router="router"
 			 class="el-menu-vertical-demo" 
 			 @open="handleOpen" 
@@ -42,64 +42,62 @@
 			return {
 				router: true,
 				hasChildren: true,
-				menus: []
+				menus: [],
+				activeIndex: ""
 			}
 		},
 		methods: {
 			initRoute(){
-				let rootKey = this.$route.meta.root;
+				let rootKey = this.$route.meta.root; //读取meta中的root值得到aaa/bbb/ccc
 				console.log(this.$route.meta["root"]);
-				// this.menus = rootKey.root;
-				// this.menus = this[rootKey];
-				// this.$route.fullPath = this[rootKey]
-				console.log(this[rootKey]);
-				// console.log(this.$route.fullPath);
-				if(rootKey == "aaa") {
-					this.menus = [{
-						title: "网络数据1",
-						index: "1",
-						subMenus: [
-							{
-								title: "网络Aaa1",
-								index: "/portal/aaa/aaa1"
-							},
-							{
-								title: "网络Aaa2",
-								index: "/portal/aaa/aaa2"
-							}
-						]
-					}]
-				}else if(rootKey == "bbb"){
-					this.menus = [{
-						title: "项目数据1",
-						index: "1",
-						subMenus: [
-							{
-								title: "项目Bbb1",
-								index: "/portal/bbb/bbb1"
-							},
-							{
-								title: "项目Bbb2",
-								index: "/portal/bbb/bbb2"
-							}
-						]
-					}]
-				}else if(rootKey == "ccc"){
-					this.menus = [{
-						title: "设置1",
-						index: "1",
-						subMenus: [
-							{
-								title: "设置Ccc1",
-								index: "/portal/ccc/ccc1"
-							},
-							{
-								title: "设置Ccc2",
-								index: "/portal/ccc/ccc2"
-							}
-						]
-					}]
-				}
+				// this.activeIndex = this.$route.fullPath; //菜单激活状态保持
+				this.menus = this[rootKey];
+				// if(rootKey == "aaa") {
+				// 	this.menus = [{
+				// 		title: "网络数据1",
+				// 		index: "1",
+				// 		subMenus: [
+				// 			{
+				// 				title: "网络Aaa1",
+				// 				index: "/portal/aaa/aaa1"
+				// 			},
+				// 			{
+				// 				title: "网络Aaa2",
+				// 				index: "/portal/aaa/aaa2"
+				// 			}
+				// 		]
+				// 	}]
+				// }else if(rootKey == "bbb"){
+				// 	this.menus = [{
+				// 		title: "项目数据1",
+				// 		index: "1",
+				// 		subMenus: [
+				// 			{
+				// 				title: "项目Bbb1",
+				// 				index: "/portal/bbb/bbb1"
+				// 			},
+				// 			{
+				// 				title: "项目Bbb2",
+				// 				index: "/portal/bbb/bbb2"
+				// 			}
+				// 		]
+				// 	}]
+				// }else if(rootKey == "ccc"){
+				// 	this.menus = [{
+				// 		title: "设置1",
+				// 		index: "1",
+				// 		subMenus: [
+				// 			{
+				// 				title: "设置Ccc1",
+				// 				index: "/portal/ccc/ccc1"
+				// 			},
+				// 			{
+				// 				title: "设置Ccc2",
+				// 				index: "/portal/ccc/ccc2"
+				// 			}
+				// 		]
+				// 	}]
+				// }
 			},
 			handleOpen(key, keyPath) {
 				console.log(key, keyPath);

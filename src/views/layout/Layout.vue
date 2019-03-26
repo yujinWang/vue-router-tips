@@ -10,7 +10,6 @@
 <script>
 	import navBar from "@/views/layout/components/NavBar"
 	import mainPage from "@/views/main-page/MainPage"
-	import sideBar from "@/views/layout/components/SideBar"
 	import sideBar1 from "@/views/layout/components/SideBar1"
 	export default{
 		data(){
@@ -18,7 +17,7 @@
 
 			}
 		},
-		components:{ navBar, mainPage, sideBar, sideBar1}
+		components:{ navBar, mainPage, sideBar1}
 	}
 </script>
 <style scoped>
