@@ -20,6 +20,6 @@ npm run build --report
 
 For a detailed explanation on how things work, check out the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
 
-记录一个简单的项目的从初始开始到完成的记录过程及遇到的问题及解决方式
+A simple vue project setup process
 
 
