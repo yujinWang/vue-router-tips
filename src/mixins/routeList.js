@@ -3,15 +3,16 @@ export default {
 		aaa(){
 			return  [
 				{
-					title: "网络数据1",
+					title: this.$t("common.project"),
 					index: "1",
+					logoImg: require("@/assets/earth.png"),
 					subMenus: [
 						{
-							title: "网络Aaa1",
+							title: this.$t("common.linkInfo"),
 							index: "/portal/aaa/aaa1"
 						},
 						{
-							title: "网络Aaa2",
+							title: this.$t("common.siteInfo"),
 							index: "/portal/aaa/aaa2"
 						}
 					]
@@ -21,15 +22,16 @@ export default {
 		bbb(){
 			return [
 				{
-					title: "项目数据1",
+					title: this.$t("common.application"),
 					index: "1",
+					logoImg: require("@/assets/qiehuan.png"),
 					subMenus: [
 						{
-							title: "项目Bbb1",
+							title: this.$t("common.projectName"),
 							index: "/portal/bbb/bbb1"
 						},
 						{
-							title: "项目Bbb2",
+							title: this.$t("common.projectAge"),
 							index: "/portal/bbb/bbb2"
 						}
 					]
@@ -39,18 +41,28 @@ export default {
 		ccc(){
 			return [
 				{
-					title: "设置1",
+					title: this.$t("common.setting"),
 					index: "1",
+					logoImg: require("@/assets/wifi.png"),
 					subMenus: [
 						{
-							title: "设置Ccc1",
+							title: this.$t("common.nameSet"),
 							index: "/portal/ccc/ccc1"
 						},
 						{
-							title: "设置Ccc2",
+							title: this.$t("common.ageSet"),
 							index: "/portal/ccc/ccc2"
 						}
 					]
+				}
+			]
+		},
+		ddd() {
+			return [
+				{
+					title: "项目数据",
+					index: "1",
+					logoImg: require("@/assets/xinhao.png"),
 				}
 			]
 		}

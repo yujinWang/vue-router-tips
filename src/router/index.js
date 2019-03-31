@@ -16,13 +16,13 @@ const Layout = () => import('@/views/layout/Layout'); //后置加载-初次加�
 const Aaa = () => import('@/views/aaa/Aaa');
 const Bbb = () => import('@/views/bbb/Bbb');
 const Ccc = () => import('@/views/ccc/Ccc');
+const Ddd = () => import('@/views/ddd/Ddd');
 const Aaa1 = () => import('@/views/aaa/components/Aaa1');
 const Bbb1 = () => import('@/views/bbb/components/Bbb1');
 const Ccc1 = () => import('@/views/ccc/components/Ccc1');
 const Aaa2 = () => import('@/views/aaa/components/Aaa2');
 const Bbb2 = () => import('@/views/bbb/components/Bbb2');
 const Ccc2 = () => import('@/views/ccc/components/Ccc2');
-
 
 Vue.use(Router)
 
@@ -93,6 +93,12 @@ export default new Router({
 							meta: { root: "ccc" }
 						}
 					]
+				},
+				{
+					path: "ddd",
+					name: "ddd",
+					component: Ddd,
+					meta: { root: "ddd" },
 				}
 			]
 		}

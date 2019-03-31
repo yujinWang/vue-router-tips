@@ -4,7 +4,14 @@ const en = {
 		'netWork': 'NetWork',
 		'application': 'Application',
 		'setting': 'Setting',
-		'language': 'English'
+		'language': 'English',
+		'project': 'Project',
+		'linkInfo': 'linkInfo',
+		'siteInfo': 'siteInfo',
+		'projectName': 'projectName',
+		'projectAge': 'projectAge',
+		'nameSet': 'nameSet',
+		'ageSet': 'ageSet'
 	},
 
 	...enLocale

@@ -4,6 +4,7 @@
 			<router-link tag="li" to="/portal/aaa">{{$t("common.netWork")}}</router-link>
 			<router-link tag="li" to="/portal/bbb">{{$t("common.application")}}</router-link>
 			<router-link tag="li" to="/portal/ccc">{{$t("common.setting")}}</router-link>
+			<router-link tag="li" to="/portal/ddd">{{$t("common.project")}}</router-link>
 		</div>
 		<div class="nav-right">
 			<div class="select-lan">

@@ -14,7 +14,8 @@
 			 <template v-show="hasChildren">
 				<el-submenu :index="item.index" v-for="(item,index) in menus" :key="index">
 					<template slot="title">
-						<i class="el-icon-location"></i>
+						<!-- <i class="el-icon-location"></i> -->   <!--element menu默认图标-->
+						<img class="logo-img" :src="item.logoImg" alt="">
 						<span>{{item.title}}</span>
 					</template>
 					<el-menu-item-group v-for="(item,subIndex) in item.subMenus" :key="subIndex">
@@ -22,7 +23,7 @@
 					</el-menu-item-group>
 				</el-submenu>
 			 </template>
-				<!-- 无子菜单 -->
+				<!-- 无子菜单-暂时放置 -->
 				<!-- <template v-show="!hasChildren">
 					<el-menu-item :index="item.index" v-for="(item,index) in menus" :key="index">
 						<i class="el-icon-menu"></i>
@@ -46,58 +47,18 @@
 				activeIndex: ""
 			}
 		},
+		created() { //经测试created和mounted都可达到相同的效果
+			this.initRoute(); //万恶的忘记初始化，导致的结果就是刷新后左侧菜单栏不可见
+		},
 		methods: {
 			initRoute(){
-				let rootKey = this.$route.meta.root; //读取meta中的root值得到aaa/bbb/ccc
-				console.log(this.$route.meta["root"]);
-				// this.activeIndex = this.$route.fullPath; //菜单激活状态保持
+				let rootKey = this.$route.meta.root;
 				this.menus = this[rootKey];
-				// if(rootKey == "aaa") {
-				// 	this.menus = [{
-				// 		title: "网络数据1",
-				// 		index: "1",
-				// 		subMenus: [
-				// 			{
-				// 				title: "网络Aaa1",
-				// 				index: "/portal/aaa/aaa1"
-				// 			},
-				// 			{
-				// 				title: "网络Aaa2",
-				// 				index: "/portal/aaa/aaa2"
-				// 			}
-				// 		]
-				// 	}]
-				// }else if(rootKey == "bbb"){
-				// 	this.menus = [{
-				// 		title: "项目数据1",
-				// 		index: "1",
-				// 		subMenus: [
-				// 			{
-				// 				title: "项目Bbb1",
-				// 				index: "/portal/bbb/bbb1"
-				// 			},
-				// 			{
-				// 				title: "项目Bbb2",
-				// 				index: "/portal/bbb/bbb2"
-				// 			}
-				// 		]
-				// 	}]
-				// }else if(rootKey == "ccc"){
-				// 	this.menus = [{
-				// 		title: "设置1",
-				// 		index: "1",
-				// 		subMenus: [
-				// 			{
-				// 				title: "设置Ccc1",
-				// 				index: "/portal/ccc/ccc1"
-				// 			},
-				// 			{
-				// 				title: "设置Ccc2",
-				// 				index: "/portal/ccc/ccc2"
-				// 			}
-				// 		]
-				// 	}]
+				this.activeIndex = this.$route.fullPath;
+				// if(rootKey == "ddd"){ //关于只显示一级菜单的处理-暂不处理
+				// 	this.hasChildren = false;
 				// }
+				// this.hasChildren = true;
 			},
 			handleOpen(key, keyPath) {
 				console.log(key, keyPath);
@@ -121,5 +82,8 @@
 	}
 	.sidebar .el-submenu .el-menu-item {
 		padding: 0 12px;
+	}
+	.sidebar .logo-img {
+		width: 20px;
 	}
 </style>
