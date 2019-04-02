@@ -16,10 +16,10 @@
 					<template slot="title">
 						<!-- <i class="el-icon-location"></i> -->   <!--element menu默认图标-->
 						<img class="logo-img" :src="item.logoImg" alt="">
-						<span>{{item.title}}</span>
+						<span>{{$t(item.title)}}</span>
 					</template>
 					<el-menu-item-group v-for="(item,subIndex) in item.subMenus" :key="subIndex">
-						<el-menu-item :index="item.index">"{{item.title}}"</el-menu-item>
+						<el-menu-item :index="item.index">{{$t(item.title)}}</el-menu-item>  <!--此处item.title多加一个引号-->
 					</el-menu-item-group>
 				</el-submenu>
 			 </template>

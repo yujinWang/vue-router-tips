@@ -1,18 +1,18 @@
 export default {
-	computed: {
+	computed: { //单独的菜单栏所需的图片和路径等信息-element中的menus中将router设置为true即可使用此处的index值作为路径进行跳转
 		aaa(){
 			return  [
 				{
-					title: this.$t("common.project"),
+					title: "common.project",
 					index: "1",
 					logoImg: require("@/assets/earth.png"),
 					subMenus: [
 						{
-							title: this.$t("common.linkInfo"),
+							title: "common.linkInfo",
 							index: "/portal/aaa/aaa1"
 						},
 						{
-							title: this.$t("common.siteInfo"),
+							title: "common.siteInfo",
 							index: "/portal/aaa/aaa2"
 						}
 					]
@@ -22,16 +22,16 @@ export default {
 		bbb(){
 			return [
 				{
-					title: this.$t("common.application"),
+					title: "common.application",
 					index: "1",
 					logoImg: require("@/assets/qiehuan.png"),
 					subMenus: [
 						{
-							title: this.$t("common.projectName"),
+							title: "common.projectName",
 							index: "/portal/bbb/bbb1"
 						},
 						{
-							title: this.$t("common.projectAge"),
+							title: "common.projectAge",
 							index: "/portal/bbb/bbb2"
 						}
 					]
@@ -41,16 +41,16 @@ export default {
 		ccc(){
 			return [
 				{
-					title: this.$t("common.setting"),
+					title: "common.setting",
 					index: "1",
 					logoImg: require("@/assets/wifi.png"),
 					subMenus: [
 						{
-							title: this.$t("common.nameSet"),
+							title: "common.nameSet",
 							index: "/portal/ccc/ccc1"
 						},
 						{
-							title: this.$t("common.ageSet"),
+							title: "common.ageSet",
 							index: "/portal/ccc/ccc2"
 						}
 					]

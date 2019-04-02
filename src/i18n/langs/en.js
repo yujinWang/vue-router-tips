@@ -11,7 +11,8 @@ const en = {
 		'projectName': 'projectName',
 		'projectAge': 'projectAge',
 		'nameSet': 'nameSet',
-		'ageSet': 'ageSet'
+		'ageSet': 'ageSet',
+		'loadingText': 'loading'
 	},
 
 	...enLocale

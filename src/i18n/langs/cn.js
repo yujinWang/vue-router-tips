@@ -11,7 +11,8 @@ const cn = {
 		'projectName': '项目名称',
 		'projectAge': '项目周期',
 		'nameSet': '名称设置',
-		'ageSet': '年龄设置'
+		'ageSet': '年龄设置',
+		'loadingText': '加载中'
 	},
 	...zhLocale
 }
