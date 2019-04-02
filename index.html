@@ -2,8 +2,14 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<title>vuex</title>
+		<title>vue项目</title>
+		<link rel="shortcut icon" type="image/x-icon" href="/favicon1.ico" />
+		<!-- vue项目中添加ico图标的问题只是在这里进行配置是不会生效的，需要在webpack.dev.conf.js中
+		的new HtmlWebpackPlugin中添加favicon: path.resolve('favicon0.ico'),
+		同时需要在webpack.prod.conf.js中的new HtmlWebpackPlugin中添加
+		favicon: path.resolve('favicon0.ico')，然后重启项目生效
+		若项目中没有index.html该如何解决，后续完成
+		-->
 		<style>
 			html,body {
 				height: 100%;
