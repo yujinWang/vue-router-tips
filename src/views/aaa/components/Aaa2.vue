@@ -1,12 +1,14 @@
 <template>
-	<div>
-		网络数据Aaa2
-		<Loading />
+	<div class="site-info">
+		<h1>{{$t("siteInfo.info")}}  vuex  {{$t("siteInfo.test")}}</h1>
+		<h2>数值是{{num}}</h2>
+		<button @click="addNum">+</button>
+		<button @click="declareNum">-</button>
 	</div>
 </template>
 
 <script>
-	import Loading from '@/components/loading/Loading'
+	import { mapGetters,mapActions } from "vuex";
 	export default {
 		data() {
 			return {
@@ -14,10 +16,13 @@
 			}
 		},
 		components: {
-			Loading
+			
+		},
+		computed: {
+			...mapGetters(["num"])
 		},
 		methods: {
-
+			...mapActions(["addNum","declareNum"])
 		}
 
 	}

@@ -5,10 +5,7 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import Vuex from 'vuex'
 import i18n from './i18n/i18n';
-
-// import lang from 'element-ui/lib/locale/lang/en' //element用法--只引入英文
-// import locale from 'element-ui/lib/locale'
-// locale.use(lang)
+import store from './store/store-config.js' //引入store文件
 
 Vue.use(ElementUI, Vuex, i18n)
 Vue.config.productionTip = false
@@ -36,6 +33,7 @@ new Vue({
   el: '#app',
 	router,
 	i18n,
+	store,
   components: { App },
   template: '<App/>'
 })

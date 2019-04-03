@@ -14,7 +14,10 @@ const en = {
 		'ageSet': 'ageSet',
 		'loadingText': 'loading'
 	},
-
+	siteInfo: {
+		info: "siteInfo",
+		test: "test"
+	},
 	...enLocale
 }
 export default en;

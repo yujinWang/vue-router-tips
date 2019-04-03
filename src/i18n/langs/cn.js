@@ -14,6 +14,10 @@ const cn = {
 		'ageSet': '年龄设置',
 		'loadingText': '加载中'
 	},
+	siteInfo: {
+		info: "站点信息",
+		test: "测试"
+	},
 	...zhLocale
 }
 export default cn;
