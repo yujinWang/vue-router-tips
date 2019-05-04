@@ -3,7 +3,7 @@ export default {
 		aaa(){
 			return  [
 				{
-					title: "common.project",
+					title: "common.netWork",
 					index: "1",
 					logoImg: require("@/assets/earth.png"),
 					subMenus: [
@@ -60,7 +60,7 @@ export default {
 		ddd() {
 			return [
 				{
-					title: "项目数据",
+					title: "common.test", 
 					index: "1",
 					logoImg: require("@/assets/xinhao.png"),
 				}

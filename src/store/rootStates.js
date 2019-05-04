@@ -1,4 +1,5 @@
 const state = {
-	num: 90
+	count: 0,
+	someLists: []
 }
 export default state;

@@ -8,7 +8,7 @@
 </template>
 
 <script>
-	import { mapGetters,mapActions } from "vuex";
+	import { mapGetters,mapState,mapActions } from "vuex";
 	export default {
 		data() {
 			return {
@@ -19,10 +19,10 @@
 			
 		},
 		computed: {
-			...mapGetters(["num"])
+			...mapGetters(["count"])
 		},
 		methods: {
-			...mapActions(["addNum","declareNum"])
+			...mapActions(["incrementStep","declareNum"])
 		}
 
 	}

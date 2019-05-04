@@ -12,7 +12,8 @@ const cn = {
 		'projectAge': '项目周期',
 		'nameSet': '名称设置',
 		'ageSet': '年龄设置',
-		'loadingText': '加载中'
+		'loadingText': '加载中',
+		'test': '测试菜单'
 	},
 	siteInfo: {
 		info: "站点信息",

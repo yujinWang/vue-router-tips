@@ -12,7 +12,8 @@ const en = {
 		'projectAge': 'projectAge',
 		'nameSet': 'nameSet',
 		'ageSet': 'ageSet',
-		'loadingText': 'loading'
+		'loadingText': 'loading',
+		'test': 'TestMenu'
 	},
 	siteInfo: {
 		info: "siteInfo",

@@ -5,7 +5,8 @@ import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
 import Vuex from 'vuex'
 import i18n from './i18n/i18n';
-import store from './store/store-config.js' //引入store文件
+// import store from './store/store-config.js' //引入store文件
+import store from './store/index';
 
 Vue.use(ElementUI, Vuex, i18n)
 Vue.config.productionTip = false

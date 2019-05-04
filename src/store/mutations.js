@@ -1,5 +1,6 @@
 const mutations = {
-	addNum: state => state.num++,
-	declareNum: state => state.num--
+	increment(state, payload) {
+		state.count += payload.step || 1;
+	}
 }
 export default mutations;
